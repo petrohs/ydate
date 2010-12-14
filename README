@@ -1,0 +1,4 @@
+Proceso que permite calcular el dia anterior a cuando se esta ejecutando.
+Principalmente para los sistemas unix en que la utileria date no esta actualizada y no tiene dicha funcionalidad.
+
+Este script lo desarrollo Carlos Aquiles
