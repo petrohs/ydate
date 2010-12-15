@@ -19,12 +19,8 @@ ayuda () { echo '
 #===============================================================================
 ' | more;} 
 
-#ayuda
- if [ "$1" = "-h" -o "$1" = "--help" -o "$1" = "--ayuda" ]
-   then
-    ayuda;
-    exit 1;
-  fi
+# show help
+[ "$1" = "-h" -o "$1" = "--help" -o "$1" = "--ayuda" ] && ayuda && exit 0;
 
 #leyendo opciones de linea comandos
  while getopts d: _opciones
