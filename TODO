@@ -1,0 +1,3 @@
+TO-DO
+=====
+* [20101214] Remplazar el proceso con el cual se calcula la fecha con -d ya que al iterativo en tiempo grandes consume mucho tiempo.
