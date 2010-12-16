@@ -90,7 +90,7 @@ do
       ;;
     -h|--help)
       echo -e "Usage: ydate [OPTIONS]..."
-      echo -e "Calculate a date in the timeline taking +-N days as parameters"
+      echo -e "Calculate a date in the timeline by taking +-N days as parameter"
       echo -e "Mandatory arguments:"
       echo -e "\t-d, --days=+N|-N                by default -1 day, otherwise +-N days"
       echo -e "\t-h, --help                      show help"
