@@ -3,8 +3,8 @@
 
 # sdate.sh 
 # =-=
-# 2010, StrategyLabs!
-# Andres Aquino <andres.aquino@gmail.com>
+# 2010, Andres Aquino <andres.aquino@gmail.com>
+# This software is Free Software; it can be redistributed under the same terms as BSD Licence.
 # All rights reserved.
 # 
 
