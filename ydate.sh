@@ -94,7 +94,7 @@ do
       echo -e "Mandatory arguments:"
       echo -e "\t-d, --days=+N|-N                by default -1 day, otherwise +-N days"
       echo -e "\t-h, --help                      show help"
-      echo -e "Report bugs to <petrohs@gmail.com>"
+      echo -e "Report bugs to <petrohs(at) mail.com>"
       exit 0
       ;;
     *)
