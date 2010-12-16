@@ -14,6 +14,9 @@ function getNumberDay () {
   local day=${3}
   local number=
   
+  # values in range year > 0 || month > 0 || day > 0 => exit 1
+  [ ${year} -le 0 -o ${month} -le 0 -o ${day} -le 0 ] && exit 1
+
   month=$(((month+9)%12))
   year=$((year-(month/10)))
   number=$(((365*year) + (year/4) - (year/100) + (year/400) + (month*306 + 5)/10 + (day -1)))
@@ -34,21 +37,14 @@ function getDayOfNumber () {
     year=$((year-1))
     day=$((number-((365*year)+(year/4)-(year/100)+(year/400))))
   fi
-  pmnth=$((((100*day)+52)/3060))
-  month=$((((pmnth+2)%12)+1))
-  year=$((year+(pmnth+2)/12))
-  day=$((day-((pmnth*306+5)/10)+1))
+  ydays=$((((100*day)+52)/3060))
+  month=$((((ydays+2)%12)+1))
+  year=$((year+(ydays+2)/12))
+  day=$((day-((ydays*306+5)/10)+1))
+
   echo "${year} ${month} ${day}"
 
 }
 
-echo "Current date: `date '+%Y%m%d'`"
-year=`date '+%Y'`
-month=`date '+%m'`
-day=`date '+%Y'`
-numberday=$(getNumberDay ${year} ${month} ${day}) 
-#daysto=20
-#numberday=$((numberday-$daysto))
-echo $(getDayOfNumber "$numberday")
 
 # 
