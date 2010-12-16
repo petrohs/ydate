@@ -129,49 +129,60 @@
 .\" ========================================================================
 .\"
 .IX Title "YDATE 1"
-.TH YDATE 1 "2010-12-14" "perl v5.8.9" "User Contributed Perl Documentation"
+.TH YDATE 1 "2010-12-16" "perl v5.8.9" "User Contributed Perl Documentation"
 .SH "NAME"
 .Vb 1
-\& ydate - calcula fechas n dias antes o despues
+\& ydate - Calculate a date in the timeline by taking +-N days as parameter
 .Ve
 .SH "SYNOPSIS"
 .IX Header "SYNOPSIS"
 .Vb 1
-\& ydate
+\& ydate [ -d ] | [ --days=+|-N ] | --help
 .Ve
 .SH "DESCRIPTION"
 .IX Header "DESCRIPTION"
-.Vb 1
-\&             SCRIPT:  ydate.sh
+.Vb 4
+\& Calculate a date in the timeline by taking +-N days as parameter
+\& Mandatory arguments:
+\&       -d, --days=+N|-N                by default -1 day, otherwise +-N days
+\&       -h, --help                      show help
 .Ve
 .PP
 .Vb 1
-\&                USO:  ./ydate.sh [-d n] [aaaammdd]
-.Ve
-.PP
-.Vb 10
-\&        DESCRIPCION:  Obtiene la fecha anterior; por omision un dia, puede variar 
-\&                      con -d numero_dias
-\&           OPCIONES:  -d   Numero de dias atras
-\&       DEPENDENCIAS:  ---
-\&               BUGS:  ---
-\&              NOTAS:  0 es igual a 1 en parametro -d
-\&                URL:  http://petrohs.googlepages.com/ydate.sh
-\&          VERSIONES:  20090130 0.0.2 PetrOHS Se rediseño para aceptar el parametro
-\&                                     -d a fin de recorrer fechas mas rapido.
-\&                      -------- 0.0.1 Carlos Aquiles Dominguez     Creacion.
+\& Report bugs to <petrohs(at) mail.com>
 .Ve
 .SH "EXAMPLES"
 .IX Header "EXAMPLES"
-.Vb 1
-\& ydate -d 10
+.Vb 2
+\& andresaquino $> date "+%Y%m%d"
+\& 20101216
+.Ve
+.PP
+.Vb 2
+\& andresaquino $> sh ydate.sh -d
+\& 20101215
+.Ve
+.PP
+.Vb 2
+\& andresaquino $> sh ydate.sh --days=-4
+\& 20101212
+.Ve
+.PP
+.Vb 2
+\& andresaquino $> sh ydate.sh --days=5
+\& 20101221
 .Ve
 .SH "AUTHOR"
 .IX Header "AUTHOR"
 .Vb 3
-\& Developed by 
-\&   petrohs
-\&   Carlos Dominguez
+\& Authors
+\&   Carlos Aquiles < (at) mail.com>  
+\&   PetrOHS <petrohs(at) mail.com>
+.Ve
+.PP
+.Vb 2
+\& Maintainer
+\&   Andres Aquino <andres.aquino(at) mail.com>
 .Ve
 .SH "BUGS"
 .IX Header "BUGS"

@@ -2,40 +2,44 @@
 
 =head1 NAME
 
- ydate - calcula fechas n dias antes o despues
+ ydate - Calculate a date in the timeline by taking +-N days as parameter
 
 =head1 SYNOPSIS
 
- ydate
+ ydate [ -d ] | [ --days=+|-N ] | --help
 
 =head1 DESCRIPTION 
  
-      
-             SCRIPT:  ydate.sh
-      
-                USO:  ./ydate.sh [-d n] [aaaammdd]
-      
-        DESCRIPCION:  Obtiene la fecha anterior; por omision un dia, puede variar 
-                      con -d numero_dias
-           OPCIONES:  -d   Numero de dias atras
-       DEPENDENCIAS:  ---
-               BUGS:  ---
-              NOTAS:  0 es igual a 1 en parametro -d
-                URL:  http://petrohs.googlepages.com/ydate.sh
-          VERSIONES:  20090130 0.0.2 PetrOHS Se rediseño para aceptar el parametro
-                                     -d a fin de recorrer fechas mas rapido.
-                      -------- 0.0.1 Carlos Aquiles Dominguez     Creacion. 
- 
+ Calculate a date in the timeline by taking +-N days as parameter
+ Mandatory arguments:
+       -d, --days=+N|-N                by default -1 day, otherwise +-N days
+       -h, --help                      show help
+       
+ Report bugs to <petrohs(at) mail.com>
+                                      
 =head1 EXAMPLES
 
- ydate -d 10
+ andresaquino $> date "+%Y%m%d"
+ 20101216
+                     
+ andresaquino $> sh ydate.sh -d
+ 20101215
+
+ andresaquino $> sh ydate.sh --days=-4
+ 20101212
+
+ andresaquino $> sh ydate.sh --days=5
+ 20101221
 
 =head1 AUTHOR
 
- Developed by 
-   petrohs
-   Carlos Dominguez
-                      
+ Authors
+   Carlos Aquiles < (at) mail.com>  
+   PetrOHS <petrohs(at) mail.com>
+
+ Maintainer
+   Andres Aquino <andres.aquino(at) mail.com>
+
 =head1 BUGS
 
 
